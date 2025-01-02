@@ -37,6 +37,18 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
     implementation project(":android-smsmms")
+    testImplementation 'org.testng:testng:6.9.6'
+
+    androidTestImplementation("androidx.test.espresso:espresso-core:$espresso_version", {
+        exclude group: "com.android.support", module: "support-annotations"
+    })
+    androidTestImplementation "org.mockito:mockito-android:$mockito_version"
+    testImplementation "androidx.test:runner:$androidx_testrunner_version"
+    testImplementation "junit:junit:$junit_version"
+    androidTestImplementation "junit:junit:$junit_version"
+    testImplementation "org.mockito:mockito-core:$mockito_version"
+    testImplementation "com.google.truth:truth:1.0.1"
+    androidTestImplementation "com.google.truth:truth:1.0.1"
 }
 
 repositories {
